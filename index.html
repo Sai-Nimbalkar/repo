@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Left Sidebar (Navigation) -->
+    <aside class="sidebar">
+        <h1 class="logo"><img src="assets/img/logo.png" width="160px"></h1>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <i class="bi bi-house-door"></i> Home</a></li>
+            <li class="search-icon" id="searchBtn"><i class="bi bi-search"></i> Search</li>
+            <li>
+                <a href="explore.html"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <i class="bi bi-compass"></i> Explore</a>
+            </li>
+            <li>
+                <a href="reels.html"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <i class="bi bi-play-circle"></i> Reels</a></li>
+            <li>
+                <a href="messages.html"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <i class="bi bi-chat"></i> Messages &nbsp;&nbsp;&nbsp;<span class="badge">7</span>
+                </a>
+            </li>
+
+            <li id="notification-btn"><i class="bi bi-heart"></i> Notifications</li>
+            <li class="create-btn" onclick="openModal()"><i class="bi bi-plus-square"></i> Create</li>
+            <li id="profile-btn">
+                <a href="profile.html"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="assets/img/profile.png" width="35px" class="profile-icon"> Profile</a>
+            </li>
+        </ul>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Stories Section -->
+        <div class="stories-container">
+            <!-- <button id="prevStory" class="story-nav">&#10094;</button> -->
+            <div class="stories-wrapper">
+                <div class="stories">
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p1.png" alt=""><span>Emily Harper</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p3.png" alt=""><span>Grace Turner</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p4.png" alt=""><span>Noah Brooks</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p6.png" alt=""><span>Lily Parker</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p2.png" alt=""><span>Ava Simmons</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p5.png" alt=""><span>Ryan Mitchell</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p7.png" alt=""><span>Sophia Brooks</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/p8.png" alt=""><span>Madison Clark</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/icon3.png" alt=""><span>Isabella Scott</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/icon1.png" alt=""><span>Bailey Carterr</span></a></div>
+                    <div class="story username"><a href="stories.html"><img src="assets/img/icon2.png" alt=""><span>Dylan Cooper</span></a></div>
+                    <div class="story username" ><a href="stories.html"><img src="assets/img/icon4.png" alt=""><span>Alex Morgan</span></a></div>
+                    <div class="story username" ><a href="stories.html"><img src="assets/img/icon5.png" alt=""><span>Jamie Sutton</span></a></div>
+                    <div class="story username" ><a href="stories.html"><img src="assets/img/icon6.png" alt=""><span>Bryce Lawson</span></a></div>
+
+
+                </div>
+            </div>
+
+            
+            <button id="nextStory" class="story-nav">&#10095;</button>
+        </div>
+<br>
+
+
+
+        <!-- Posts Section -->
+
+        <section class="posts">
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/img/icon1.png" alt="">
+                    <span class="black">sb.eha • 1h</span>
+                </div>
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="assets/img/gallery3" alt="Image 1">
+                        <img src="assets/img/gallery2" alt="Image 2">
+                        <img src="assets/img/gallery1.jpeg" alt="Image 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+                <div class="post-footer">
+                    <i class="bi bi-heart like-btn" id="likeIcon"></i>&nbsp;&nbsp;
+                    <i class="bi bi-chat"></i>&nbsp;&nbsp;
+                    <i
+                        class="bi bi-send"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="bi bi-bookmark save-btn" id="saveIcon"></i>
+                </div>
+
+               
+                
+
+            </div>
+        </section>
+        <section class="posts" style="padding-top: 10px;">
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/img/icon2.png" alt="">
+                    <span class="black">sb.eha • 1h</span>
+                </div>
+                <img src="assets/img/gallery2" class="post-img">
+                <div class="post-footer">
+                    <i class="bi bi-heart like-btn" id="likeIcon3"></i>&nbsp;&nbsp;
+                    <i class="bi bi-chat"></i>&nbsp;&nbsp;
+                    <i
+                        class="bi bi-send"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="bi bi-bookmark save-btn" id="saveIcon2"></i>
+                </div>
+            </div>
+        </section><br>
+        <section class="posts">
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/img/icon3.png" alt="">
+                    <span class="black">sb.eha • 1h</span>
+                </div>
+                <img src="assets/img/gallery1.jpeg" class="post-img">
+                <div class="post-footer">
+                    <i class="bi bi-heart like-btn" id="likeIcon2"></i>&nbsp;&nbsp;
+                    <i class="bi bi-chat"></i>&nbsp;&nbsp;
+                    <i
+                        class="bi bi-send"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="bi bi-bookmark save-btn" id="saveIcon3"></i>
+                </div>
+            </div>
+            <script>
+                document.getElementById("likeIcon").addEventListener("click", function () {
+                    this.classList.toggle("bi-heart");
+                    this.classList.toggle("bi-heart-fill");
+                    this.classList.toggle("liked");
+                });
+                document.getElementById("likeIcon2").addEventListener("click", function () {
+                    this.classList.toggle("bi-heart");
+                    this.classList.toggle("bi-heart-fill");
+                    this.classList.toggle("liked");
+                });
+                document.getElementById("likeIcon3").addEventListener("click", function () {
+                    this.classList.toggle("bi-heart");
+                    this.classList.toggle("bi-heart-fill");
+                    this.classList.toggle("liked");
+                });
+
+
+                document.getElementById("saveIcon").addEventListener("click", function () {
+                    this.classList.toggle("bi-bookmark");
+                    this.classList.toggle("bi-bookmark-fill");
+                    this.classList.toggle("saved");
+                }); document.getElementById("saveIcon3").addEventListener("click", function () {
+                    this.classList.toggle("bi-bookmark");
+                    this.classList.toggle("bi-bookmark-fill");
+                    this.classList.toggle("saved");
+                }); document.getElementById("saveIcon2").addEventListener("click", function () {
+                    this.classList.toggle("bi-bookmark");
+                    this.classList.toggle("bi-bookmark-fill");
+                    this.classList.toggle("saved");
+                });
+            </script>
+        </section>
+
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Create new post</h2>
+                <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" alt="Upload Icon" id="uploadIcon">
+                    <p id="uploadText">Drag photos and videos here</p>
+                    <button class="upload-btn">Select from computer</button>
+                    <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;" multiple>
+                    <div class="preview" id="preview"></div>
+                </div>
+                <button onclick="uploadPost()" class="post-btn">Post</button>
+            </div>
+        </div>
+        
+        
+        </main>
+
+    <!-- Right Sidebar (Profile & Suggestions) -->
+    <aside class="right-sidebar"><a href="profile.html" style="text-decoration: none; color: inherit;">
+        <div class="profile">
+            <img src="assets/img/profile.png" alt="">
+            <div>
+                <strong class="username">Nat_Scott</strong>
+                <p class="font">Natalie Scott</p>
+            </div>
+            <button>Switch</button>
+        </div></a>
+
+        <h4>Suggested for You</h4>
+        <div class="suggestions">
+            <div class="suggestion">
+                <img src="assets/img/icon5.png" alt="">
+                <div>
+                    <strong class="username">Jordan Taylor</strong>
+                    <p class="font">Followed by Lily P.</p>
+                </div>
+                <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+            </div>
+
+            <div class="suggestion">
+                <img src="assets/img/icon6.png" alt="">
+                <div>
+                    <strong class="username">Alexis Morgan</strong>
+                    <p class="font">Suggested for you</p>
+                </div>
+                <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+            </div>
+
+            <div class="suggestion">
+                <img src="assets/img/icon1.png" alt="">
+                <div>
+                    <strong class="username">Cameron Blake</strong>
+                    <p class="font">Followed by Noah Brooks</p>
+                </div>
+                <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+            </div>
+
+            <div class="suggestion">
+                <img src="assets/img/icon3.png" alt="">
+                <div>
+                    <strong class="username">Casey Bennett</strong>
+                    <p class="font">Suggested for you</p>
+                </div>
+                <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+            </div>
+            
+        </div>
+        <script>
+            function toggleFollow(button) {
+                if (button.innerText === "Follow") {
+                    button.innerText = "Following";
+                    button.classList.add("following");
+                } else {
+                    button.innerText = "Follow";
+                    button.classList.remove("following");
+                }
+            }
+        </script>
+        
+    </aside>
+
+
+
+    <!-- Search Sidebar -->
+    <div id="searchSidebar" class="search-sidebar">
+        <div class="search-header">
+            <h2>Search</h2>
+            <button id="closeSidebar">&times;</button>
+        </div>
+        <input type="text" class="search-input" placeholder="Search">
+
+        <div class="search-results">
+            <h3>Recent</h3>
+            <ul>
+                <li>
+                    <img src="assets/img/user1.png" alt="User">
+                    <span  class="username">Adison Ray</span>
+                    <!-- <button class="close-btn1">&times;</button> -->
+                </li>
+                <li>
+                    <img src="assets/img/user2.png" alt="User">
+                    <span  class="username">Kian Lawley</span>
+                    <!-- <button class="close-btn1">&times;</button> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const searchSidebar = document.getElementById("searchSidebar");
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    const searchInput = document.querySelector(".search-input");
+    const closeBtns = document.querySelectorAll(".close-btn");
+    const searchResultsList = document.querySelector(".search-results ul");
+
+    // Function to open search sidebar
+    function openSearchSidebar() {
+        searchSidebar.classList.add("active");
+    }
+
+    // Function to close search sidebar
+    function closeSearchSidebar() {
+        searchSidebar.classList.remove("active");
+    }
+
+    // Close sidebar when close button is clicked
+    closeSidebarBtn.addEventListener("click", closeSearchSidebar);
+
+    // Remove recent search item when close button is clicked
+    closeBtns.forEach((btn) => {
+        btn.addEventListener("click", function (event) {
+            event.target.parentElement.remove();
+        });
+    });
+
+    // Live search function (Search all usernames on website)
+    searchInput.addEventListener("input", function () {
+        const filter = searchInput.value.toLowerCase();
+        const usernames = document.querySelectorAll(".username"); // Get all usernames on the page
+
+        // Clear previous search results
+        searchResultsList.innerHTML = "";
+
+        usernames.forEach((user) => {
+            const usernameText = user.textContent.toLowerCase();
+            if (usernameText.includes(filter)) {
+                // Create a new list item dynamically
+                const li = document.createElement("li");
+                li.innerHTML = `
+                                <span>${user.textContent}</span>
+                                <button class="close-btn">&times;</button>`;
+
+                // Append to search results
+                searchResultsList.appendChild(li);
+
+                // Add event listener to close button
+                li.querySelector(".close-btn").addEventListener("click", function () {
+                    li.remove();
+                });
+            }
+        });
+    });
+});
+
+    </script>
+
+    <!-- Notification Sidepane (Sliding from Left) -->
+    <div id="notification-sidepane" class="sidepane">
+        <div class="sidepane-header">
+            <h2>Notifications</h2>
+            <button id="close-sidepane">&times;</button>
+        </div>
+
+        <div class="notifications-content">
+            <p><strong>Follow Request</strong></p>
+            <p>218 Pending</p>
+            <div class="notification-item">
+                <img src="assets/img/user1.png" alt="User">
+                <p class="font1"><strong>Username</strong> requested to follow you. <span>1d</span></p>
+                <button class="confirm-btn">Confirm</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            <div class="notification-item">
+                <img src="assets/img/user2.png" alt="User">
+                <p class="font1"><strong>AnotherUser</strong> liked your post. <span>2d</span></p>
+            </div>
+            <div class="notification-item">
+                <img src="assets/img/icon5.png" alt="User">
+                <p class="font1"><strong>Username</strong> requested to follow you. <span>1d</span></p>
+                <button class="confirm-btn">Confirm</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            <div class="notification-item">
+                <img src="assets/img/icon6.png" alt="User">
+                <p class="font1"><strong>Username</strong> requested to follow you. <span>1d</span></p>
+                <button class="confirm-btn">Confirm</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            <div class="notification-item">
+                <img src="assets/img/p1.png" alt="User">
+                <p class="font1"><strong>Username</strong> started following you. <span>1d</span></p>
+                <button class="confirm-btn">Following</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Handle Confirm button click
+    document.querySelectorAll(".confirm-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const notificationItem = this.closest(".notification-item");
+
+            // Change text to "Following"
+            this.textContent = "Following";
+            this.classList.add("following-btn"); 
+
+            // Change message text
+            const message = notificationItem.querySelector("p.font1");
+            message.innerHTML = message.innerHTML.replace("requested to follow you", "started following you");
+
+            // Remove the delete button
+            const deleteButton = notificationItem.querySelector(".delete-btn");
+            if (deleteButton) {
+                deleteButton.remove();
+            }
+        });
+    });
+
+    // Handle Delete button click
+    document.querySelectorAll(".delete-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const notificationItem = this.closest(".notification-item");
+            notificationItem.remove(); // Remove the div from the DOM
+        });
+    });
+});
+
+    </script>
+
+    <script>
+        //stories slider
+        document.addEventListener("DOMContentLoaded", function () {
+            const storiesContainer = document.querySelector(".stories-wrapper");
+            const stories = document.querySelector(".stories");
+            const prevBtn = document.getElementById("prevStory");
+            const nextBtn = document.getElementById("nextStory");
+
+            let scrollPosition = 0;
+            const storyWidth = document.querySelector(".story").offsetWidth + 10; // 10px for margins
+            const totalStories = document.querySelectorAll(".story").length;
+
+            // Clone first & last stories for infinite loop effect
+            const firstStory = stories.firstElementChild.cloneNode(true);
+            const lastStory = stories.lastElementChild.cloneNode(true);
+
+            stories.appendChild(firstStory);
+            stories.insertBefore(lastStory, stories.firstElementChild);
+
+            // Adjust initial position to skip the cloned last story
+            scrollPosition = storyWidth;
+            stories.style.transform = `translateX(-${scrollPosition}px)`;
+
+            nextBtn.addEventListener("click", function () {
+                scrollPosition += storyWidth * 3; // Move 3 stories at a time
+
+                stories.style.transition = "transform 0.5s ease-in-out";
+                stories.style.transform = `translateX(-${scrollPosition}px)`;
+
+                setTimeout(() => {
+                    if (scrollPosition >= (storyWidth * totalStories)) {
+                        stories.style.transition = "none";
+                        scrollPosition = storyWidth;
+                        stories.style.transform = `translateX(-${scrollPosition}px)`;
+                    }
+                }, 500);
+            });
+
+            prevBtn.addEventListener("click", function () {
+                scrollPosition -= storyWidth * 3; // Move back 3 stories
+
+                stories.style.transition = "transform 0.5s ease-in-out";
+                stories.style.transform = `translateX(-${scrollPosition}px)`;
+
+                setTimeout(() => {
+                    if (scrollPosition <= 0) {
+                        stories.style.transition = "none";
+                        scrollPosition = storyWidth * totalStories;
+                        stories.style.transform = `translateX(-${scrollPosition}px)`;
+                    }
+                }, 500);
+            });
+        });
+
+        
+            function openModal() {
+                document.getElementById("uploadModal").style.display = "block";
+            }
+        
+            function closeModal() {
+                document.getElementById("uploadModal").style.display = "none";
+                document.getElementById("preview").innerHTML = "";
+                document.getElementById("uploadIcon").style.display = "block";
+                document.getElementById("uploadText").style.display = "block";
+            }
+        
+            window.onclick = function(event) {
+                var modal = document.getElementById("uploadModal");
+                if (event.target === modal) {
+                    closeModal();
+                }
+            }
+        
+            document.getElementById("fileInput").addEventListener("change", function(event) {
+                let preview = document.getElementById("preview");
+                preview.innerHTML = "";
+                let files = event.target.files;
+                if (files.length > 0) {
+                    document.getElementById("uploadIcon").style.display = "none";
+                    document.getElementById("uploadText").style.display = "none";
+                }
+                Array.from(files).forEach(file => {
+                    let reader = new FileReader();
+                    reader.onload = function(e) {
+                        let element;
+                        if (file.type.startsWith("image")) {
+                            element = document.createElement("img");
+                        } else if (file.type.startsWith("video")) {
+                            element = document.createElement("video");
+                            element.controls = true;
+                        }
+                        element.src = e.target.result;
+                        preview.appendChild(element);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            });
+        
+
+            
+    document.getElementById("fileInput").addEventListener("change", async function (event) {
+        let preview = document.getElementById("preview");
+        preview.innerHTML = "";
+        let files = event.target.files;
+
+        if (files.length > 0) {
+            document.getElementById("uploadIcon").style.display = "none";
+            document.getElementById("uploadText").style.display = "none";
+        }
+
+        Array.from(files).forEach(file => {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let element;
+                if (file.type.startsWith("image")) {
+                    element = document.createElement("img");
+                } else if (file.type.startsWith("video")) {
+                    element = document.createElement("video");
+                    element.controls = true;
+                }
+                element.src = e.target.result;
+                preview.appendChild(element);
+            };
+            reader.readAsDataURL(file);
+        });
+    });
+
+    async function uploadPost() {
+        let fileInput = document.getElementById("fileInput");
+        if (fileInput.files.length === 0) {
+            alert("Please select a file first!");
+            return;
+        }
+
+        let formData = new FormData();
+        formData.append("file", fileInput.files[0]);
+
+        try {
+            let response = await fetch("http://localhost:5000/api/posts", {
+                method: "POST",
+                body: formData
+            });
+
+            let result = await response.json();
+            if (response.ok) {
+                alert("Post uploaded successfully!");
+                closeModal(); // Close modal after success
+                location.reload(); // Reload page to fetch new posts
+            } else {
+                alert("Error: " + result.error);
+            }
+        } catch (error) {
+            console.error("Error uploading post:", error);
+            alert("Failed to upload post. Check console for details.");
+        }
+    }
+
+
+
+    </script>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
